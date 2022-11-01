@@ -1,0 +1,8 @@
+.yarn
+.next
+.husky
+dist
+*.html
+*.svg
+*.ico
+node_modules
