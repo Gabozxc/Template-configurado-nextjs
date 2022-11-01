@@ -1,7 +1,14 @@
 {
   "name": "flexi-web",
-  "version": "0.1.0",
+  "author": "Gabriel Dos Santos",
+  "description": "Flexiweb",
+  "version": "0.0.1",
   "private": true,
+  "engines": {
+    "node": ">=16.0.0",
+    "yarn": ">=1.22.0",
+    "npm": "please-use-yarn"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
