@@ -1,7 +1,7 @@
 {
-  "name": "flexi-web",
+  "name": "business-manager",
   "author": "Gabriel Dos Santos",
-  "description": "Flexiweb",
+  "description": "Para administrar peque;as y grandes empresas",
   "version": "0.0.1",
   "private": true,
   "engines": {
