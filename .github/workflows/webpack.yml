@@ -24,6 +24,7 @@ jobs:
 
     - name: Build
       run: |
+        yarn cache clean
         yarn install
         yarn lint
         yarn build
