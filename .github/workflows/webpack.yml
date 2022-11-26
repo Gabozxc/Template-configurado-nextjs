@@ -22,10 +22,13 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Build
-      run: |
+    - name: Clean and install
         sudo yarn cache clean
         sudo yarn install
-        sudo yarn lint
+        
+    - name: Build
+      run: |
         sudo yarn build
+        
+    - name: Start
         sudo yarn start
