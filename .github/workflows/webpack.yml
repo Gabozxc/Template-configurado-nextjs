@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-env:
+  build:
     runs-on: ubuntu-latest
 
     strategy:
@@ -15,32 +15,22 @@ jobs:
         node-version: [16.x, 18.x]
 
     steps:
-      - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          
-  install-clean:
-    runs-on: actions/setup-node@v3
-  
-    steps:
-      - name: Clean and install
-        run: |
-          sudo yarn cache clean
-          sudo yarn install
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
 
-  build:
-    runs-on: actions/setup-node@v3
-    steps:
-      - name: Build
-        run: |
-          sudo yarn build
-
-  start:
-    runs-on: actions/setup-node@v3
-    steps:
-      - name: Start
-        run: |
-          sudo yarn start
+    - name: Clean and install
+      run: |
+        sudo yarn cache clean
+        sudo yarn install
+        
+    - name: Build
+      run: |
+        sudo yarn build
+        
+    - name: Start
+      run: |
+        sudo yarn start
