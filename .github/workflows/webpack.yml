@@ -24,8 +24,8 @@ jobs:
 
     - name: Build
       run: |
-        yarn cache clean
-        yarn install
-        yarn lint
-        yarn build
-        yarn start
+        sudo yarn cache clean
+        sudo yarn install
+        sudo yarn lint
+        sudo yarn build
+        sudo yarn start
