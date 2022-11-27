@@ -26,15 +26,18 @@ jobs:
       run: |
         sudo yarn cache clean
         sudo yarn install
-        exit 0
-        
+              
     - name: Build
       run: |
         sudo yarn build
-        exit 0
         
     - name: Start
       run: |
         sudo yarn start
+        
+    - name: Exit
+      run: |
         exit 0
+        
+        
  
