@@ -1,7 +1,7 @@
 {
   "name": "business-manager",
   "author": "Gabriel Dos Santos",
-  "description": "Para administrar peque;as y grandes empresas",
+  "description": "Para administrar peque;as y medianas empresas",
   "version": "0.0.1",
   "private": true,
   "engines": {

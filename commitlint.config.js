@@ -31,6 +31,8 @@ module.exports = {
             'always',
             [
                 'build',
+                'packages',
+                'update',
                 'chore',
                 'ci',
                 'docs',
