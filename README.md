@@ -1,28 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Folder structure
 
-## Getting Started
+# component
 
-First, run the development server:
+The individual UI components that make up the app will live in here
 
-```bash
-yarn dev
-```
+# lib
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Business/app/domain logic will live in here.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+# pages
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Will be the actual routes/pages as per the required Next.js structure.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+# pages/api
 
-## Learn More
+Request to API Gateway will be handled here.
 
-To learn more about Next.js, take a look at the following resources:
+# public
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Static assets will live in here.
 
 ## Configuration
 
-https://dev.to/alexeagleson/how-to-build-scalable-architecture-for-your-nextjs-project-2pb7
+# Husky
+
+Husky is a git hook manager. It will run the pre-commit hook to run the linter and prettier before committing.
+
+We going to use the following hooks:
+
+'build',
+'packages',
+'update',
+'chore',
+'ci',
+'docs',
+'feat',
+'fix',
+'perf',
+'refactor',
+'revert',
+'style',
+'test',
+'translation',
+'security',
+'changeset',
+
+Example:
+
+git commit -m "feat: add new feature"
+
+Recommend dont use update or chore, use feat or fix instead.
+Commits needs to be specific, dont use "update" or "fix" without specifying what was updated or fixed.
+
+# Prettier && Lint
+
+Prettier is a code formatter. It will format the code to a standard format.
+Lint is a code linter. It will check the code for errors and inconsistencies.
+
+# Commitizen
+
+Commitizen is a tool that will help us to create a commit message with a specific format.
+
+## How to run
+
+# Development
+
+The project is using Next.js with yarn workspaces. To run the project in development mode, you need to run the following commands:
+yarn install
+yarn dev
+
+# Production
+
+To run the project in production mode, you need to run the following commands:
+yarn install
+yarn build
+yarn start
