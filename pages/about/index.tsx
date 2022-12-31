@@ -1,3 +1,4 @@
+import FooterLayout from '../../components/layouts/footer/FooterLayout';
 import PrimaryLayout from '../../components/layouts/primary/PrimaryLayout';
 import SidebarLayout from '../../components/layouts/sidebar/SidebarLayout';
 import { NextPageWithLayout } from '../interfaces/page';
@@ -22,6 +23,7 @@ About.getLayout = (page) => {
     <PrimaryLayout>
       <SidebarLayout />
       {page}
+      <FooterLayout />
     </PrimaryLayout>
   );
 };

@@ -11,7 +11,11 @@ const PrimaryLayout: React.FC<IPrimaryLayout> = ({ children }) => {
       <Head>
         <title>Primary Layout Example</title>
       </Head>
-      <main className={styles.main}>{children}</main>
+      <main
+        className={styles.main + ' bg-white-800 color-white dark:bg-gray-900'}
+      >
+        {children}
+      </main>
     </>
   );
 };

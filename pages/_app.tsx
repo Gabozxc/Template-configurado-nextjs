@@ -1,5 +1,6 @@
+import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
-import '../styles/globals.css';
+import '../styles/tailwind.css';
 import { NextPageWithLayout } from './interfaces/page';
 
 interface AppPropsWithLayout extends AppProps {
@@ -7,10 +8,15 @@ interface AppPropsWithLayout extends AppProps {
 }
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
-  // Use the layout defined at the page level, if available
-  const layout = Component.getLayout || ((page) => page);
+  // describe what to do the code below
+  // if Component has getLayout property, then use it, otherwise use default layouts
+  const defaultLayout = Component.getLayout || ((page) => page);
 
-  return layout(<Component {...pageProps} />);
+  return (
+    <ThemeProvider enableSystem={true} attribute="class">
+      {defaultLayout(<Component {...pageProps} />)}
+    </ThemeProvider>
+  );
 }
 
 export default MyApp;
