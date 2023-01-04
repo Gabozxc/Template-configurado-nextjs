@@ -13,12 +13,9 @@ const About: NextPageWithLayout = () => {
     .findAll(['personaje'], { exact: false }).length;
 
   const [id, setId] = useState<number>(allCharacters > 0 ? allCharacters : 1);
-  const changeCharacter = useCallback(
-    (identificador: number) => {
-      setId(identificador);
-    },
-    [setId]
-  );
+  const changeCharacter = useCallback((identificador: number) => {
+    setId(identificador);
+  }, []);
   const { data, isLoading, isError, error } = useGetUsers(id);
 
   if (isLoading) return <p>Loading...</p>;

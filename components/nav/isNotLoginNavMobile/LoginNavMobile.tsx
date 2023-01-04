@@ -62,18 +62,16 @@ const LoginNavMobile = () => {
     },
   ];
 
-  const prevSliderPosition = () => {
+  const prevSliderPosition = useCallback(() => {
     setSliderPosition(sliderPosition === 0 ? 0 : sliderPosition - 1);
-  };
+  }, [sliderPosition]);
 
   const nextSliderPosition = useCallback(() => {
-    console.log('renderizao con click osea en la funcion');
     setSliderPosition(
       sliderPosition === urls.length - 1 ? urls.length - 1 : sliderPosition + 1
     );
   }, [sliderPosition, urls.length]);
 
-  console.log('renderizandome');
   return (
     <nav className="fixed bottom-0 left-0 w-full z-40 backdrop-blur-sm border-gray-200 border-t dark:border-gray-500 min-h-[80px] flex flex-col justify-center">
       <div className="flex items-end justify-between flex-row flex-nowrap">
