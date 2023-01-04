@@ -14,8 +14,8 @@ const About: NextPageWithLayout = () => {
 
   const [id, setId] = useState<number>(allCharacters > 0 ? allCharacters : 1);
   const changeCharacter = useCallback(
-    (id: number) => {
-      setId(id);
+    (identificador: number) => {
+      setId(identificador);
     },
     [setId]
   );
