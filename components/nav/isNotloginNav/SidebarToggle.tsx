@@ -37,6 +37,9 @@ const SidebarToggle: React.FC<ISidebarToggle> = ({
     },
   ];
   const filteredRoutes = routes.filter((route) => route.href !== currentRoute);
+  const handleToggleSidebar = () => {
+    setTogleSidebar(false);
+  };
 
   return (
     <aside
@@ -59,9 +62,7 @@ const SidebarToggle: React.FC<ISidebarToggle> = ({
           <li className="flex justify-center items-center !mt-auto">
             <button
               className="w-16 h-8 bg-blue-100 rounded-lg  flex items-center justify-center hover:ring-2 ring-blue-400 transition-all duration-300 focus:outline-none dark:bg-slate-900 absolute"
-              onClick={() => {
-                setTogleSidebar(false);
-              }}
+              onClick={handleToggleSidebar}
               aria-label="Toggle Dark Mode"
             >
               <ArrowLeftIcon className="w-auto h-5" />

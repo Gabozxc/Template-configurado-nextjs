@@ -61,16 +61,20 @@ const LoginNavMobile = () => {
       ],
     },
   ];
+  const prevSliderPosition = () => {
+    setSliderPosition(sliderPosition === 0 ? 0 : sliderPosition - 1);
+  };
+  const nextSliderPosition = () => {
+    setSliderPosition(
+      sliderPosition === urls.length - 1 ? urls.length - 1 : sliderPosition + 1
+    );
+  };
 
   return (
     <nav className="fixed bottom-0 left-0 w-full z-40 backdrop-blur-sm border-gray-200 border-t dark:border-gray-500 min-h-[80px] flex flex-col justify-center">
       <div className="flex items-end justify-between flex-row flex-nowrap">
         <div className="w-8 h-8">
-          <ChevronLeftIcon
-            onClick={() => {
-              setSliderPosition(sliderPosition === 0 ? 0 : sliderPosition - 1);
-            }}
-          />
+          <ChevronLeftIcon onClick={prevSliderPosition} />
         </div>
         <div className="relative w-full">
           {urls.map((section, index) => {
@@ -121,15 +125,7 @@ const LoginNavMobile = () => {
           })}
         </div>
         <div className="w-8 h-8">
-          <ChevronRightIcon
-            onClick={() => {
-              setSliderPosition(
-                sliderPosition === urls.length - 1
-                  ? urls.length - 1
-                  : sliderPosition + 1
-              );
-            }}
-          />
+          <ChevronRightIcon onClick={nextSliderPosition} />
         </div>
       </div>
     </nav>
