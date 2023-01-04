@@ -2,9 +2,7 @@ import Link from 'next/link';
 import ButtonThemeToggler from '../../ButtonThemeToggler/ButtonThemeToggler';
 import styles from './SidebarLayout.module.css';
 
-export interface ISidebarLayout {}
-
-const SidebarLayout: React.FC<ISidebarLayout> = () => {
+const SidebarLayout = () => {
   return (
     <nav
       className={

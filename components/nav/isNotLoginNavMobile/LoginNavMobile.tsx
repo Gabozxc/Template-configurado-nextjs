@@ -4,8 +4,6 @@ import { useRouter } from 'next/router';
 import { Fragment, useState } from 'react';
 import ButtonThemeToggler from '../../theme/ButtonThemeToggler/ButtonThemeToggler';
 
-interface IloginNavMobile {}
-
 interface Iurls {
   section: string;
   urlsArray: {

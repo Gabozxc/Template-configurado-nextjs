@@ -2,8 +2,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import ButtonThemeToggler from '../../theme/ButtonThemeToggler/ButtonThemeToggler';
 
-interface ILoginNavDesktop {}
-
 const LoginNavDesktop: React.FC<ILoginNavDesktop> = () => {
   const router = useRouter();
   const { pathname } = router;
@@ -46,7 +44,8 @@ const LoginNavDesktop: React.FC<ILoginNavDesktop> = () => {
             <Link
               href="/login"
               className={`mx-4 my-2 text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white md:text-sm lg:text-base ${
-                pathname == '/login' && `!text-black dark:!text-white font-bold`
+                pathname === '/login' &&
+                `!text-black dark:!text-white font-bold`
               }`}
             >
               Iniciar sesion

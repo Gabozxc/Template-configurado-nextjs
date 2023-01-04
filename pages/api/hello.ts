@@ -6,7 +6,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  let error: boolean = false;
+  let error = false;
   const getCharacter: Data = await fetch(
     `https://rickandmortyapi.com/api/character/${req?.query.id}`
   )
