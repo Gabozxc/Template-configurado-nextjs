@@ -25,7 +25,9 @@ const About: NextPageWithLayout = () => {
           <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 mt-10 transition duration-300">
             <div className="p-5">
               <a href="#" aria-label="asdsad">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"></h5>
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Soy un h5
+                </h5>
               </a>
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                 <b>His name is {data?.name}</b>
@@ -49,7 +51,7 @@ const About: NextPageWithLayout = () => {
                     fillRule="evenodd"
                     d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
                     clipRule="evenodd"
-                  ></path>
+                  />
                 </svg>
               </a>
             </div>

@@ -62,13 +62,6 @@ const LoginNavMobile = () => {
     },
   ];
 
-  const urlsFiltered = urls.map((url) => {
-    return {
-      section: url.section,
-      urlsArray: url.urlsArray.filter((url) => url.urlPage !== pathname),
-    };
-  });
-
   return (
     <nav className="fixed bottom-0 left-0 w-full z-40 backdrop-blur-sm border-gray-200 border-t dark:border-gray-500 min-h-[80px] flex flex-col justify-center">
       <div className="flex items-end justify-between flex-row flex-nowrap">
@@ -80,7 +73,7 @@ const LoginNavMobile = () => {
           />
         </div>
         <div className="relative w-full">
-          {urlsFiltered.map((section, index) => {
+          {urls.map((section, index) => {
             return (
               <div
                 key={section.section}
