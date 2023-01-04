@@ -16,9 +16,9 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const [queryClient] = useState(() => new QueryClient());
   const defaultLayout = Component.getLayout || ((page) => page);
   return (
-    <QueryClientProvider client={queryClient} contextSharing={true}>
+    <QueryClientProvider client={queryClient} contextSharing>
       <Hydrate state={pageProps.dehydratedState}>
-        <ThemeProvider enableSystem={true} attribute="class">
+        <ThemeProvider attribute="class" enableSystem>
           {defaultLayout(<Component {...pageProps} />)}
         </ThemeProvider>
       </Hydrate>

@@ -17,6 +17,7 @@ const ButtonThemeToggler = () => {
       className="w-8 h-8 bg-blue-100 rounded-lg dark:bg-slate-900 flex items-center justify-center hover:ring-2 ring-blue-400 transition-all duration-300 focus:outline-none"
       onClick={changeTheme}
       aria-label="Toggle Dark Mode"
+      type="button"
     >
       {theme === 'light' ? (
         <SunIcon className="text-blue-500 w-auto h-5" />

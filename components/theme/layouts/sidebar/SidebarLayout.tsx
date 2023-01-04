@@ -5,10 +5,7 @@ import styles from './SidebarLayout.module.css';
 const SidebarLayout = () => {
   return (
     <nav
-      className={
-        styles.nav +
-        ' transition duration-300 bg-gray-100 border-r border-gray-200 dark:bg-night  dark:border-gray-500'
-      }
+      className={`${styles.nav} transition duration-300 bg-gray-100 border-r border-gray-200 dark:bg-night  dark:border-gray-500`}
     >
       <div className="flex justify-center items-center flex-col">
         <ButtonThemeToggler />

@@ -4,6 +4,6 @@
 
 @layer base {
     html {
-        font-family: montserrat;
+        font-family: montserrat, sans-serif;
     }
 }

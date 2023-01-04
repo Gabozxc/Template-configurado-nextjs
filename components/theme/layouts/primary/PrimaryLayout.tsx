@@ -13,7 +13,7 @@ const PrimaryLayout: React.FC<IPrimaryLayout> = ({ children, titleHead }) => {
         <title>{titleHead}</title>
       </Head>
       <main
-        className={styles.main + ' bg-white-800 color-white dark:bg-gray-900'}
+        className={`${styles.main} bg-white-800 color-white dark:bg-gray-900`}
       >
         {children}
       </main>

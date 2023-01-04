@@ -63,7 +63,8 @@ const SidebarToggle: React.FC<ISidebarToggle> = ({
             <button
               className="w-16 h-8 bg-blue-100 rounded-lg  flex items-center justify-center hover:ring-2 ring-blue-400 transition-all duration-300 focus:outline-none dark:bg-slate-900 absolute"
               onClick={handleToggleSidebar}
-              aria-label="Toggle Dark Mode"
+              aria-label="Toggle Sidebar"
+              type="button"
             >
               <ArrowLeftIcon className="w-auto h-5" />
             </button>
