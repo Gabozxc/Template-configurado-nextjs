@@ -1,0 +1,30 @@
+.landingPageLayout {
+    display: grid;
+    grid-template-rows: 1fr minmax(auto, 100vh) 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "main"
+        "main"
+        "footer";
+}
+
+.landingPageLayout>nav {
+    grid-area: menu;
+}
+
+.landingPageLayout>main {
+    grid-area: main;
+}
+
+.landingPageLayout>footer {
+    grid-area: footer;
+}
+
+@media (min-width: 768px) {
+    .landingPageLayout {
+        grid-template-areas:
+            "menu"
+            "main"
+            "footer";
+    }
+}

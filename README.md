@@ -12,6 +12,10 @@ Business/app/domain logic will live in here.
 
 Will be the actual routes/pages as per the required Next.js structure.
 
+# Api
+
+This call will be going serverless to the local project, and then to the API Gateway.
+
 ## pages/api
 
 Request to API Gateway will be handled here.
@@ -21,6 +25,16 @@ Request to API Gateway will be handled here.
 Static assets will live in here.
 
 # Configuration
+
+This folder is to handle the configuration of the axios client, the environment variables, requests, etc.
+
+# Hooks
+
+This folder is to handle the custom hooks. Hooks are functions that let you “hook into” React state and lifecycle features from function components. The mayory of the hooks are going to be related to api calls with react-query.
+
+# Interfaces
+
+This folder is to handle the interfaces. The interfaces are going to be used in the components, hooks, etc.
 
 ## Husky
 

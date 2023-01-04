@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import ButtonThemeToggler from '../theme/ButtonThemeToggler';
+import ButtonThemeToggler from '../../ButtonThemeToggler/ButtonThemeToggler';
 import styles from './SidebarLayout.module.css';
 
 export interface ISidebarLayout {}

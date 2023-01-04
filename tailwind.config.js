@@ -11,6 +11,9 @@ module.exports = {
         'night': "#1F2937",
       }
     },
+    fontFamily: {
+      'montserrat': ['Montserrat', 'sans-serif'],
+    },
   },
   plugins: [],
 }
