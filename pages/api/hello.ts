@@ -4,7 +4,7 @@ import { Data } from '../../interfaces/Data';
 //Function type Data
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  response: NextApiResponse<Data>
 ) {
   let error = false;
   const getCharacter: Data = await fetch(
@@ -16,11 +16,11 @@ export default async function handler(
       return err.json();
     });
 
-  if (error) return res.status(500).json(getCharacter);
+  if (error) return response.status(500).json(getCharacter);
 
   const data: Data = {
     name: getCharacter.name,
   };
 
-  return res.status(200).json(data);
+  return response.status(200).json(data);
 }

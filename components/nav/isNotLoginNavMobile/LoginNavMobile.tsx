@@ -8,12 +8,12 @@ interface Iurls {
   section: string;
   urlsArray: {
     name: string;
-    url: string;
+    urlPage: string;
     component?: unknown;
   }[];
 }
 
-const LoginNavMobile: React.FC<IloginNavMobile> = () => {
+const LoginNavMobile = () => {
   const router = useRouter();
   const { pathname } = router;
 
@@ -24,12 +24,12 @@ const LoginNavMobile: React.FC<IloginNavMobile> = () => {
       urlsArray: [
         {
           name: 'Inicio',
-          url: '/',
+          urlPage: '/',
         },
 
         {
           name: 'Crear cuenta',
-          url: '/register',
+          urlPage: '/register',
         },
       ],
     },
@@ -38,11 +38,11 @@ const LoginNavMobile: React.FC<IloginNavMobile> = () => {
       urlsArray: [
         {
           name: 'Iniciar sesion',
-          url: '/login',
+          urlPage: '/login',
         },
         {
           name: 'Sobre nosotros',
-          url: '/about',
+          urlPage: '/about',
         },
       ],
     },
@@ -51,11 +51,11 @@ const LoginNavMobile: React.FC<IloginNavMobile> = () => {
       urlsArray: [
         {
           name: 'Contactanos',
-          url: '/contacto',
+          urlPage: '/contacto',
         },
         {
           name: 'Cambiar tema',
-          url: '#',
+          urlPage: '#',
           component: <ButtonThemeToggler />,
         },
       ],
@@ -65,7 +65,7 @@ const LoginNavMobile: React.FC<IloginNavMobile> = () => {
   const urlsFiltered = urls.map((url) => {
     return {
       section: url.section,
-      urlsArray: url.urlsArray.filter((url) => url.url !== pathname),
+      urlsArray: url.urlsArray.filter((url) => url.urlPage !== pathname),
     };
   });
 
@@ -83,7 +83,7 @@ const LoginNavMobile: React.FC<IloginNavMobile> = () => {
           {urlsFiltered.map((section, index) => {
             return (
               <div
-                key={index + section.section}
+                key={section.section}
                 className={`w-full h-full right-auto mx-auto top-0 bottom-0 flex items-center justify-center transition-transform duration-1000 ease-in-out transform
               ${
                 sliderPosition === index
@@ -95,18 +95,18 @@ const LoginNavMobile: React.FC<IloginNavMobile> = () => {
                     }`
               }`}
               >
-                {section.urlsArray.map((url, index) => {
+                {section.urlsArray.map((url) => {
                   return (
-                    <Fragment key={section.section + index}>
+                    <Fragment key={section.section + url.name + url.urlPage}>
                       {url.component ? (
                         <div>
                           <ButtonThemeToggler />
                         </div>
                       ) : (
                         <Link
-                          href={url.url}
+                          href={url.urlPage}
                           className={`p-2 border border-transparent text-center ${
-                            pathname === url.url
+                            pathname === url.urlPage
                               ? 'text-black dark:text-white font-bold'
                               : 'text-gray-500 dark:text-gray-400'
                           } 
@@ -115,7 +115,7 @@ const LoginNavMobile: React.FC<IloginNavMobile> = () => {
                             'rounded text-center bg-black !text-white hover:!bg-white hover:!text-black hover:!border-black active:bg-white active:!text-black active:!border-black dark:bg-white dark:!text-black dark:hover:!bg-black dark:hover:!text-white dark:hover:!border-white dark:active:bg-black dark:active:!text-white dark:active:!border-white'
                           }
                           `}
-                          aria-disabled={pathname === url.url}
+                          aria-disabled={pathname === url.urlPage}
                         >
                           {url.name}
                         </Link>
