@@ -1,5 +1,5 @@
-import LoginNavMobile from '../components/nav/isNotLoginNavMobile/LoginNavMobile';
-import LoginNavDesktop from '../components/nav/isNotloginNav/LoginNavDesktop';
+import LoginNavDesktop from '../components/nav/isNotloginNav/IsNotLoginNavDesktop';
+import LoginNavMobile from '../components/nav/isNotloginNav/IsNotLoginNavMobile';
 import FooterLayout from '../components/theme/layouts/footer/FooterLayout';
 import IsNotLoginLandingPage from '../components/theme/layouts/landingPage/LandingPageLayout';
 import { NextPageWithLayout } from '../interfaces/page';

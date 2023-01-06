@@ -1,7 +1,8 @@
+import ButtonThemeToggler from '../../theme/ButtonThemeToggler/ButtonThemeToggler';
+import { ContentNavMobile } from '../ContentNavMobile/ConentNavMobile';
 import { Iurls } from '../interfaces/INavMobile';
-import { ContentNavMobile } from './ConentNavMobile';
 
-export default function LoginNavMobile() {
+export default function IsNotLoginNavMobile() {
   const urls: Iurls[] = [
     {
       section: 'section-1',
@@ -40,7 +41,7 @@ export default function LoginNavMobile() {
         {
           name: 'Cambiar tema',
           urlPage: '#',
-          component: true,
+          component: <ButtonThemeToggler />,
         },
       ],
     },
