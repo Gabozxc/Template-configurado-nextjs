@@ -22,7 +22,7 @@ export function ContentNavMobile({ urls }: { urls: Iurls[] }) {
   }, [sliderPosition, urls.length]);
 
   return (
-    <>
+    <div className="flex items-end justify-between flex-row flex-nowrap">
       <div className="w-8 h-8">
         <ChevronLeftIcon onClick={prevSliderPosition} />
       </div>
@@ -75,6 +75,6 @@ export function ContentNavMobile({ urls }: { urls: Iurls[] }) {
       <div className="w-8 h-8">
         <ChevronRightIcon onClick={nextSliderPosition} />
       </div>
-    </>
+    </div>
   );
 }

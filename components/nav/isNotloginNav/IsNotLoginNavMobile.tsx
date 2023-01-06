@@ -49,9 +49,7 @@ export default function IsNotLoginNavMobile() {
 
   return (
     <nav className="fixed bottom-0 left-0 w-full z-40 backdrop-blur-sm border-gray-200 border-t dark:border-gray-500 min-h-[80px] flex flex-col justify-center">
-      <div className="flex items-end justify-between flex-row flex-nowrap">
-        {<ContentNavMobile urls={urls} />}
-      </div>
+      {<ContentNavMobile urls={urls} />}
     </nav>
   );
 }
