@@ -2,7 +2,7 @@ import Link from 'next/link';
 import ButtonThemeToggler from '../../ButtonThemeToggler/ButtonThemeToggler';
 import styles from './SidebarLayout.module.css';
 
-const SidebarLayout = () => {
+export default function SidebarLayout() {
   return (
     <nav
       className={`${styles.nav} transition duration-300 bg-gray-100 border-r border-gray-200 dark:bg-night  dark:border-gray-500`}
@@ -27,6 +27,4 @@ const SidebarLayout = () => {
       </Link>
     </nav>
   );
-};
-
-export default SidebarLayout;
+}

@@ -6,10 +6,10 @@ export interface IPrimaryLayout {
   titleHead: string;
 }
 
-const IsNotLoginLandingPage: React.FC<IPrimaryLayout> = ({
+export default function IsNotLoginLandingPage({
   children,
   titleHead,
-}) => {
+}: IPrimaryLayout) {
   return (
     <>
       <Head>
@@ -18,6 +18,4 @@ const IsNotLoginLandingPage: React.FC<IPrimaryLayout> = ({
       <div className={style.landingPageLayout}>{children}</div>
     </>
   );
-};
-
-export default IsNotLoginLandingPage;
+}

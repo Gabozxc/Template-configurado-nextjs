@@ -12,10 +12,10 @@ interface ISidebarToggle {
   togleSidebar: boolean;
 }
 
-const SidebarToggle: React.FC<ISidebarToggle> = ({
+export default function SidebarToggle({
   setTogleSidebar,
   togleSidebar,
-}) => {
+}: ISidebarToggle) {
   const router = useRouter();
   const currentRoute = router.pathname;
 
@@ -73,6 +73,4 @@ const SidebarToggle: React.FC<ISidebarToggle> = ({
       </div>
     </aside>
   );
-};
-
-export default SidebarToggle;
+}

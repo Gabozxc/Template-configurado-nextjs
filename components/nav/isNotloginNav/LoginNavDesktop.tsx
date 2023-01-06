@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import ButtonThemeToggler from '../../theme/ButtonThemeToggler/ButtonThemeToggler';
 
-const LoginNavDesktop: React.FC<ILoginNavDesktop> = () => {
+export default function LoginNavDesktop() {
   const router = useRouter();
   const { pathname } = router;
   const urls = [
@@ -64,6 +64,4 @@ const LoginNavDesktop: React.FC<ILoginNavDesktop> = () => {
       </div>
     </nav>
   );
-};
-
-export default LoginNavDesktop;
+}

@@ -13,7 +13,7 @@ interface Iurls {
   }[];
 }
 
-const LoginNavMobile = () => {
+export default function LoginNavMobile() {
   const router = useRouter();
   const { pathname } = router;
 
@@ -132,6 +132,4 @@ const LoginNavMobile = () => {
       </div>
     </nav>
   );
-};
-
-export default LoginNavMobile;
+}

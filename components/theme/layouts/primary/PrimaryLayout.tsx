@@ -6,7 +6,7 @@ export interface IPrimaryLayout {
   titleHead: string;
 }
 
-const PrimaryLayout: React.FC<IPrimaryLayout> = ({ children, titleHead }) => {
+export default function PrimaryLayout({ children, titleHead }: IPrimaryLayout) {
   return (
     <>
       <Head>
@@ -19,6 +19,4 @@ const PrimaryLayout: React.FC<IPrimaryLayout> = ({ children, titleHead }) => {
       </main>
     </>
   );
-};
-
-export default PrimaryLayout;
+}

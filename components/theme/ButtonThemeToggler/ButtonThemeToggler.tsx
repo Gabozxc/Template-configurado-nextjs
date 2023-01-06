@@ -2,7 +2,7 @@ import { MoonIcon, SunIcon } from '@heroicons/react/solid';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
-const ButtonThemeToggler = () => {
+export default function ButtonThemeToggler() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
@@ -26,6 +26,4 @@ const ButtonThemeToggler = () => {
       )}
     </button>
   );
-};
-
-export default ButtonThemeToggler;
+}
