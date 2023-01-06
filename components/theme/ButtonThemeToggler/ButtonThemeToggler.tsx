@@ -1,17 +1,17 @@
 import { MoonIcon, SunIcon } from '@heroicons/react/solid';
 import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 export default function ButtonThemeToggler() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const changeTheme = useCallback(() => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  }, [theme, setTheme]);
   useEffect(() => {
     setMounted(true);
   }, []);
   if (!mounted) return null;
-  const changeTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  };
   return (
     <button
       className="w-8 h-8 bg-blue-100 rounded-lg dark:bg-slate-900 flex items-center justify-center hover:ring-2 ring-blue-400 transition-all duration-300 focus:outline-none"
