@@ -1,4 +1,4 @@
-import ButtonThemeToggler from '../../theme/ButtonThemeToggler/ButtonThemeToggler';
+import ButtonThemeToggler from '../../../buttonThemeToggler/ButtonThemeToggler';
 import { ContentNavMobile } from '../ContentNavMobile/ConentNavMobile';
 import { Iurls } from '../interfaces/INavMobile';
 
@@ -14,7 +14,7 @@ export default function IsNotLoginNavMobile() {
 
         {
           name: 'Crear cuenta',
-          urlPage: '/register',
+          urlPage: '/signup',
         },
       ],
     },

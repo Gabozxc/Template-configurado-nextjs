@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import style from './LadingPageLayout.module.css';
+import style from './IsNotLoginLandingPage.module.css';
 
 export interface IPrimaryLayout {
   children: React.ReactNode;
@@ -15,7 +15,7 @@ export default function IsNotLoginLandingPage({
       <Head>
         <title>{titleHead}</title>
       </Head>
-      <div className={style.landingPageLayout}>{children}</div>
+      <div className={style.PageLayout}>{children}</div>
     </>
   );
 }

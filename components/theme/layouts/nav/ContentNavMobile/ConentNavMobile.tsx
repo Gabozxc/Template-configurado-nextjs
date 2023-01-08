@@ -53,7 +53,7 @@ export function ContentNavMobile({ urls }: { urls: Iurls[] }) {
                         className={`p-2 border border-transparent text-center ${
                           pathname === url.urlPage
                             ? 'text-black dark:text-white font-bold'
-                            : 'text-gray-500 dark:text-gray-400'
+                            : 'text-gray-600 dark:text-gray-400'
                         } 
                           ${
                             url.name === 'Crear cuenta' &&

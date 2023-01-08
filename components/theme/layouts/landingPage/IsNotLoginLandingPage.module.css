@@ -1,6 +1,6 @@
-.landingPageLayout {
+.PageLayout {
     display: grid;
-    grid-template-rows: 1fr minmax(auto, 100vh) 1fr;
+    grid-template-rows: 1fr minmax(80vh, auto) 1fr;
     grid-template-columns: 1fr;
     grid-template-areas:
         "main"
@@ -8,20 +8,20 @@
         "footer";
 }
 
-.landingPageLayout>nav {
+.PageLayout>nav {
     grid-area: menu;
 }
 
-.landingPageLayout>main {
+.PageLayout>main {
     grid-area: main;
 }
 
-.landingPageLayout>footer {
+.PageLayout>footer {
     grid-area: footer;
 }
 
 @media (min-width: 768px) {
-    .landingPageLayout {
+    .PageLayout {
         grid-template-areas:
             "menu"
             "main"

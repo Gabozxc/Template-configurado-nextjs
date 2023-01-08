@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import ButtonThemeToggler from '../../theme/ButtonThemeToggler/ButtonThemeToggler';
+import ButtonThemeToggler from '../../../buttonThemeToggler/ButtonThemeToggler';
 
 export default function LoginNavDesktop() {
   const router = useRouter();
@@ -27,7 +27,7 @@ export default function LoginNavDesktop() {
           <Link
             href={url.url}
             key={url.name}
-            className={`mx-4 my-2 text-gray-400 hover:text-black dark:text-gray-400 dark:hover:text-white md:text-sm lg:text-base text-center ${
+            className={`mx-4 my-2 text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white md:text-sm lg:text-base text-center ${
               !url.url.localeCompare(pathname) &&
               `!text-black dark:!text-white font-bold`
             }`}
@@ -45,12 +45,12 @@ export default function LoginNavDesktop() {
         >
           Iniciar sesion
         </Link>
-        <a
-          href="#"
+        <Link
+          href="/signup"
           className="mx-4 my-2 p-2 md:text-sm lg:text-base text-center border rounded bg-black text-white hover:bg-white hover:text-black hover:border-black dark:bg-white dark:text-black dark:hover:bg-black dark:hover:text-white dark:hover:border-white"
         >
           Crear cuenta
-        </a>
+        </Link>
         <ButtonThemeToggler />
       </div>
     </nav>

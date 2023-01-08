@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import ButtonThemeToggler from '../../ButtonThemeToggler/ButtonThemeToggler';
+import ButtonThemeToggler from '../../buttonThemeToggler/ButtonThemeToggler';
 import styles from './SidebarLayout.module.css';
 
 export default function SidebarLayout() {

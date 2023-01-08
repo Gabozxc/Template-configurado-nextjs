@@ -1,20 +1,19 @@
-import LoginAccountForm from '../../components/forms/LoginAccountForm';
+import CreateAccountForm from '../../components/forms/CreateAccountForm';
 import FooterLayout from '../../components/theme/layouts/footer/FooterLayout';
 import IsNotLoginLandingPage from '../../components/theme/layouts/landingPage/IsNotLoginLandingPage';
 import IsNotLoginNavDesktop from '../../components/theme/layouts/nav/isNotloginNav/IsNotLoginNavDesktop';
 import IsNotLoginNavMobile from '../../components/theme/layouts/nav/isNotloginNav/IsNotLoginNavMobile';
-
 import { NextPageWithLayout } from '../../interfaces/page';
 
-const LoginUser: NextPageWithLayout = () => {
+const SignUp: NextPageWithLayout = () => {
   return (
     <main>
-      <LoginAccountForm />
+      <CreateAccountForm />
     </main>
   );
 };
 
-LoginUser.getLayout = (page) => {
+SignUp.getLayout = (page) => {
   return (
     <IsNotLoginLandingPage titleHead="Inciar sesion">
       <div className="hidden md:flex">
@@ -29,4 +28,4 @@ LoginUser.getLayout = (page) => {
   );
 };
 
-export default LoginUser;
+export default SignUp;

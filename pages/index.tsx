@@ -1,12 +1,12 @@
-import LoginNavDesktop from '../components/nav/isNotloginNav/IsNotLoginNavDesktop';
-import LoginNavMobile from '../components/nav/isNotloginNav/IsNotLoginNavMobile';
 import FooterLayout from '../components/theme/layouts/footer/FooterLayout';
-import IsNotLoginLandingPage from '../components/theme/layouts/landingPage/LandingPageLayout';
+import IsNotLoginLandingPage from '../components/theme/layouts/landingPage/IsNotLoginLandingPage';
+import IsNotLoginNavDesktop from '../components/theme/layouts/nav/isNotloginNav/IsNotLoginNavDesktop';
+import IsNotLoginNavMobile from '../components/theme/layouts/nav/isNotloginNav/IsNotLoginNavMobile';
 import { NextPageWithLayout } from '../interfaces/page';
 
 const Home: NextPageWithLayout = () => {
   return (
-    <main className="mainContent">
+    <main>
       <h1 className="text-center text-lg">
         TEN CONTROL SOBRE TU FUTURO D SASD ADS A
       </h1>
@@ -18,11 +18,11 @@ Home.getLayout = (page) => {
   return (
     <IsNotLoginLandingPage titleHead="Pagina principal">
       <div className="hidden md:flex">
-        <LoginNavDesktop />
+        <IsNotLoginNavDesktop />
       </div>
       {page}
       <div className="md:hidden">
-        <LoginNavMobile />
+        <IsNotLoginNavMobile />
       </div>
       <FooterLayout />
     </IsNotLoginLandingPage>
