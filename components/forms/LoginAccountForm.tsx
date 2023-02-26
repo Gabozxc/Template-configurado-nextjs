@@ -29,7 +29,7 @@ export default function LoginAccountForm() {
   return (
     <section className="flex flex-col justify-center items-center h-full">
       <form
-        className="transparent rounded p-2 text-black dark:text-white"
+        className="transparent rounded p-2 text-black dark:text-white "
         onSubmit={handleSubmit(onSubmit)}
       >
         <h1 className="font-bold text-lg md:text-2xl">
@@ -64,6 +64,11 @@ export default function LoginAccountForm() {
           >
             Iniciar sesion
           </button>
+        </div>
+        <div className="flex flex-col m-1">
+          <p className="text-gray-600 bold dark:text-gray-300">
+            No puedo iniciar sesion
+          </p>
         </div>
       </form>
     </section>

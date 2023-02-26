@@ -1,9 +1,9 @@
 import ButtonThemeToggler from '../../../buttonThemeToggler/ButtonThemeToggler';
-import { ContentNavMobile } from '../ContentNavMobile/ConentNavMobile';
-import { Iurls } from '../interfaces/INavMobile';
+import { IsliderNavMobile } from '../../../interfaces/INavMobile';
+import { SliderNavMobile } from '../../../navComponents/SliderNavMobile';
 
 export default function IsNotLoginNavMobile() {
-  const urls: Iurls[] = [
+  const urls: IsliderNavMobile[] = [
     {
       section: 'section-1',
       urlsArray: [
@@ -46,10 +46,5 @@ export default function IsNotLoginNavMobile() {
       ],
     },
   ];
-
-  return (
-    <nav className="fixed bottom-0 left-0 w-full z-40 backdrop-blur-sm border-gray-200 border-t dark:border-gray-500 min-h-[80px] flex flex-col justify-center">
-      {<ContentNavMobile urls={urls} />}
-    </nav>
-  );
+  return <header>{<SliderNavMobile urls={urls} />}</header>;
 }

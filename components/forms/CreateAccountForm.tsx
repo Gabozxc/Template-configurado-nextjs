@@ -37,7 +37,7 @@ export default function CreateAccountForm() {
     return false;
   };
   return (
-    <section className="flex flex-col justify-center items-center h-full">
+    <section className="flex flex-col justify-center items-center h-full md:h-[105vh]">
       <form
         className="transparent rounded p-2 text-black dark:text-white"
         onSubmit={handleSubmit(onSubmit)}
