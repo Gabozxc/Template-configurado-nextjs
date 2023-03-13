@@ -1,7 +1,7 @@
 {
   "name": "business-manager",
   "author": "Gabriel Dos Santos",
-  "description": "Para administrar peque;as y medianas empresas",
+  "description": "Template de nextjs",
   "version": "0.0.1",
   "private": true,
   "engines": {
